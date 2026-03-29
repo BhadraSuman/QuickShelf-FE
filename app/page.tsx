@@ -1,65 +1,219 @@
-import Image from "next/image";
+"use client";
+
+import Hero from "@/components/Hero";
+import ServiceCard from "@/components/ServiceCard";
+import ProductCard from "@/components/ProductCard";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    const services = [
+        {
+            icon: "📦",
+            title: "Store Management",
+            description: "Centralized platform for managing store operations, sales, and customer data.",
+            features: ["Real-time sales tracking", "Multi-store management", "Customer analytics", "Quick reconciliation"],
+        },
+        {
+            icon: "📊",
+            title: "Inventory Management",
+            description: "Automated inventory tracking, stock optimization, and supply chain integration.",
+            features: ["Real-time stock levels", "Automated reordering", "Barcode scanning", "Wastage reduction"],
+        },
+        {
+            icon: "👥",
+            title: "Staff Management",
+            description: "Streamlined workforce management, scheduling, and performance tracking.",
+            features: ["Shift scheduling", "Performance tracking", "Payroll integration", "Training modules"],
+        },
+        {
+            icon: "💡",
+            title: "Electronic Shelf Labels",
+            description: "Dynamic pricing and product information display with wireless ESL technology.",
+            features: ["Real-time price updates", "Energy efficient", "Multi-language support", "Promotion management"],
+        },
+        {
+            icon: "🔌",
+            title: "API Integration",
+            description: "Seamlessly connect Quickshelf with your existing retail systems and third-party platforms.",
+            features: ["RESTful APIs", "Legacy system compatibility", "Real-time sync", "Custom integrations"],
+        },
+        {
+            icon: "📈",
+            title: "Analytics & Insights",
+            description: "Advanced reporting and business intelligence to drive decision-making.",
+            features: ["Sales analytics", "Customer behavior insights", "Trend analysis", "Custom reports"],
+        },
+    ];
+
+    const products = [
+        {
+            name: "Quickshelf Core",
+            category: "Software",
+            image: "⚙️",
+            description: "Complete store management platform for inventory, sales, and customer management.",
+            benefits: ["Cloud-based", "User-friendly interface", "Mobile app support", "24/7 support"],
+        },
+        {
+            name: "Smart ESL System",
+            category: "Hardware",
+            image: "🏷️",
+            description: "Electronic shelf labels with dynamic pricing and promotional capabilities.",
+            benefits: ["2.4GHz wireless", "5-year battery life", "High visibility display", "Temperature stable"],
+        },
+        {
+            name: "POS Integration",
+            category: "Software",
+            image: "💳",
+            description: "Unified point-of-sale system with flexible payment options and customer data capture.",
+            benefits: ["Multi-payment support", "Offline mode", "Receipt customization", "Fast transactions"],
+        },
+        {
+            name: "Mobile Staff App",
+            category: "Software",
+            image: "📱",
+            description: "Mobile application for staff to manage tasks, check schedules, and access store info.",
+            benefits: ["iOS & Android", "Offline functionality", "Real-time notifications", "Task management"],
+        },
+        {
+            name: "Data Analytics Suite",
+            category: "Software",
+            image: "📊",
+            description: "Comprehensive analytics and business intelligence tools for retail insights.",
+            benefits: ["Predictive analytics", "Custom dashboards", "Data export options", "Real-time reporting"],
+        },
+        {
+            name: "Customer Loyalty Platform",
+            category: "Software",
+            image: "🎁",
+            description: "Loyalty program management with targeted promotions and customer engagement.",
+            benefits: ["Personalized offers", "Points system", "Customer segmentation", "Reward redemption"],
+        },
+    ];
+
+    return (
+        <main className="min-h-screen bg-white">
+            <Hero />
+
+            {/* Services Section */}
+            <section className="w-full bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16 md:mb-24">
+                        <div className="inline-block bg-olive/10 text-olive px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold mb-5 border border-olive/20">
+                            CORE SOLUTIONS
+                        </div>
+                        <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-olive mb-6 leading-tight">
+                            Our Complete Solutions
+                        </h2>
+                        <div className="w-20 h-1.5 bg-olive mx-auto mb-8 rounded-full"></div>
+                        <p className="text-gray-700 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+                            Comprehensive software and hardware solutions designed for modern retail operations
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                        {services.map((service, idx) => (
+                            <ServiceCard key={idx} {...service} />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Products Section */}
+            <section className="w-full bg-gray-50 px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16 md:mb-24">
+                        <div className="inline-block bg-yellow-100 text-olive px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold mb-5 border border-yellow-300">
+                            PRODUCT LINEUP
+                        </div>
+                        <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-olive mb-6 leading-tight">Products & Services</h2>
+                        <div className="w-20 h-1.5 bg-olive mx-auto mb-8 rounded-full"></div>
+                        <p className="text-gray-700 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+                            Explore our complete product lineup tailored for retail excellence
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                        {products.map((product, idx) => (
+                            <ProductCard key={idx} {...product} />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Benefits Section */}
+            <section className="w-full bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+                <div className="max-w-5xl mx-auto">
+                    <div className="text-center mb-16 md:mb-24">
+                        <div className="inline-block bg-olive/10 text-olive px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold mb-5 border border-olive/20">
+                            WHY US
+                        </div>
+                        <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-olive mb-6 leading-tight">Why Choose Quickshelf</h2>
+                        <div className="w-20 h-1.5 bg-olive mx-auto rounded-full"></div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
+                            <div className="text-5xl mb-4">🚀</div>
+                            <h3 className="text-2xl font-bold text-olive mb-3">Fast Implementation</h3>
+                            <p className="text-gray-700 leading-relaxed">
+                                Get up and running in days, not months. Our streamlined onboarding ensures minimal disruption to your
+                                business.
+                            </p>
+                        </div>
+                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
+                            <div className="text-5xl mb-4">🔒</div>
+                            <h3 className="text-2xl font-bold text-olive mb-3">Security & Compliance</h3>
+                            <p className="text-gray-700 leading-relaxed">
+                                Enterprise-grade security with data encryption, compliance with retail standards, and regular security
+                                audits.
+                            </p>
+                        </div>
+                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
+                            <div className="text-5xl mb-4">📞</div>
+                            <h3 className="text-2xl font-bold text-olive mb-3">24/7 Support</h3>
+                            <p className="text-gray-700 leading-relaxed">
+                                Dedicated support team available round the clock to assist with any issues or questions.
+                            </p>
+                        </div>
+                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
+                            <div className="text-5xl mb-4">🌍</div>
+                            <h3 className="text-2xl font-bold text-olive mb-3">Global Scalability</h3>
+                            <p className="text-gray-700 leading-relaxed">
+                                Designed to scale from single stores to multi-location enterprises across regions and countries.
+                            </p>
+                        </div>
+                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
+                            <div className="text-5xl mb-4">💰</div>
+                            <h3 className="text-2xl font-bold text-olive mb-3">Cost Effective</h3>
+                            <p className="text-gray-700 leading-relaxed">
+                                Flexible pricing models with ROI-focused solutions that reduce operational costs and increase revenue.
+                            </p>
+                        </div>
+                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
+                            <div className="text-5xl mb-4">🔄</div>
+                            <h3 className="text-2xl font-bold text-olive mb-3">Continuous Updates</h3>
+                            <p className="text-gray-700 leading-relaxed">
+                                Regular feature updates and improvements based on latest retail trends and customer feedback.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="w-full bg-olive text-white px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full mix-blend-screen blur-3xl opacity-20"></div>
+                <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">Transform Your Retail Business Today</h2>
+                    <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+                        Join hundreds of retailers already using Quickshelf to streamline operations and boost profitability
+                    </p>
+                    <div className="pt-6">
+                        <a
+                            href="/contact"
+                            className="inline-block px-12 py-4 rounded-2xl font-bold bg-yellow-400 text-olive shadow-xl hover:shadow-2xl hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 text-lg"
+                        >
+                            Start Your Free Trial
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
 }

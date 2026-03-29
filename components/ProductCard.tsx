@@ -1,0 +1,36 @@
+export default function ProductCard({
+    name,
+    category,
+    image,
+    description,
+    benefits,
+}: {
+    name: string;
+    category: string;
+    image: string;
+    description: string;
+    benefits: string[];
+}) {
+    return (
+        <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-gray-200 hover:border-yellow-300 group transform hover:translate-y-[-8px]">
+            <div className="w-full h-56 sm:h-64 bg-linear-to-br from-olive/10 via-yellow-50 to-yellow-100 flex items-center justify-center text-7xl group-hover:from-olive/20 group-hover:to-yellow-200 transition-all duration-300">
+                {image}
+            </div>
+            <div className="p-6 sm:p-8 flex flex-col h-full">
+                <div className="mb-4">
+                    <span className="text-xs sm:text-sm font-bold text-white bg-olive px-4 py-1.5 rounded-full">{category}</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-olive mb-2 group-hover:text-yellow-600 transition-colors">{name}</h3>
+                <p className="text-gray-700 text-sm sm:text-base mb-5 leading-relaxed flex-1">{description}</p>
+                <ul className="space-y-2.5 pt-4 border-t border-gray-200">
+                    {benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-gray-700 text-xs sm:text-sm">
+                            <span className="text-yellow-500 font-bold mt-0.5">●</span>
+                            <span className="font-medium">{benefit}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    );
+}

@@ -1,26 +1,45 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+    scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Link Hover Effects */
+a {
+    @apply transition-colors;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+a:hover {
+    @apply text-yellow-500;
+}
+
+/* Button Hover Effects */
+button {
+    @apply transition-all;
+}
+
+button:hover {
+    @apply shadow-lg;
+}
+
+/* Form Styling */
+input,
+textarea,
+select {
+    @apply focus:outline-none transition-all;
+}
+
+/* Container Query Support */
+@supports (container-type: inline-size) {
+    .container {
+        container-type: inline-size;
+    }
 }
