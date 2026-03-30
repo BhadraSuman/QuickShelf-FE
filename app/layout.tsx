@@ -137,14 +137,11 @@ export default function RootLayout({
                                 <div className="flex flex-col sm:flex-row justify-between items-center gap-6 text-sm text-white/70 font-semibold">
                                     <p>&copy; {new Date().getFullYear()} Quickshelf. All rights reserved.</p>
                                     <div className="flex gap-8">
-                                        <a href="#" className="hover:text-yellow-300 transition">
+                                        <a href="/privacy" className="hover:text-yellow-300 transition">
                                             Privacy Policy
                                         </a>
-                                        <a href="#" className="hover:text-yellow-300 transition">
+                                        <a href="/terms" className="hover:text-yellow-300 transition">
                                             Terms of Service
-                                        </a>
-                                        <a href="#" className="hover:text-yellow-300 transition">
-                                            Cookie Policy
                                         </a>
                                     </div>
                                 </div>
