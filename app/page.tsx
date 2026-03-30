@@ -25,13 +25,13 @@ export default function Home() {
             features: ["Shift scheduling", "Performance tracking", "Payroll integration", "Training modules"],
         },
         {
-            icon: "💡",
+            // icon: "💡",
             title: "Electronic Shelf Labels",
             description: "Dynamic pricing and product information display with wireless ESL technology.",
             features: ["Real-time price updates", "Energy efficient", "Multi-language support", "Promotion management"],
         },
         {
-            icon: "🔌",
+            // icon: "🔌",
             title: "API Integration",
             description: "Seamlessly connect Quickshelf with your existing retail systems and third-party platforms.",
             features: ["RESTful APIs", "Legacy system compatibility", "Real-time sync", "Custom integrations"],
@@ -212,6 +212,29 @@ export default function Home() {
                             Start Your Free Trial
                         </a>
                     </div>
+                </div>
+            </section>
+
+            {/*Newsletter Section*/}
+            <section className="w-full bg-gray-50 px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+                <div className="max-w-3xl mx-auto text-center space-y-6">
+                    <h2 className="text-3xl sm:text-4xl font-black text-olive">Stay Updated with Quickshelf</h2>
+                    <p className="text-gray-700 text-lg leading-relaxed">
+                        Subscribe to our newsletter for the latest retail insights, product updates, and exclusive offers.
+                    </p>
+                    <form className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            className="w-full sm:w-auto px-6 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all duration-300"
+                        />
+                        <button
+                            type="submit"
+                            className="px-8 py-3 rounded-lg font-bold bg-yellow-400 text-olive shadow-xl hover:shadow-2xl hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 text-lg"
+                        >
+                            Subscribe
+                        </button>
+                    </form>
                 </div>
             </section>
         </main>

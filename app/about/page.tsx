@@ -4,7 +4,7 @@ export default function AboutPage() {
     return (
         <main className="min-h-screen bg-white text-olive">
             {/* Hero Section */}
-            <section className="w-full bg-linear-to-br from-white to-olive/10 px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+            <section className="w-full bg-gradient-to-br from-white to-olive/10 px-4 sm:px-6 lg:px-8 py-12 md:py-20">
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-olive mb-6">About Quickshelf</h1>
                     <p className="text-lg sm:text-xl text-gray-700">
@@ -126,7 +126,7 @@ export default function AboutPage() {
             </section>
 
             {/* Stats Section */}
-            <section className="w-full bg-linear-to-r from-olive to-olive/80 text-white px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+            <section className="w-full bg-gradient-to-r from-olive to-olive/80 text-white px-4 sm:px-6 lg:px-8 py-12 md:py-20">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center">Our Impact</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
@@ -187,7 +187,7 @@ export default function AboutPage() {
                     </p>
                     <a
                         href="/contact"
-                        className="inline-block px-8 py-3 rounded-full font-semibold bg-linear-to-r from-yellow-300 to-yellow-500 text-olive shadow-lg hover:from-yellow-400 hover:to-yellow-600 transition"
+                        className="inline-block px-8 py-3 rounded-full font-semibold bg-gradient-to-r from-yellow-300 to-yellow-500 text-olive shadow-lg hover:from-yellow-400 hover:to-yellow-600 hover:text-white transition"
                     >
                         Contact Us Today
                     </a>

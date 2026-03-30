@@ -112,7 +112,7 @@ export default function ContactPage() {
 
                     {/* Contact Form */}
                     <div className="lg:col-span-2">
-                        <div className="bg-linear-to-br from-yellow-50 to-olive/5 rounded-lg shadow-lg p-6 sm:p-8">
+                        <div className="bg-gradient-to-br from-yellow-50 to-olive/5 rounded-lg shadow-lg p-6 sm:p-8">
                             <h2 className="text-2xl sm:text-3xl font-bold text-olive mb-6">Send us a Message</h2>
 
                             {submitted && (
@@ -209,7 +209,7 @@ export default function ContactPage() {
 
                                 <button
                                     type="submit"
-                                    className="w-full py-3 rounded-lg font-semibold bg-linear-to-r from-yellow-300 to-yellow-500 text-olive shadow-lg hover:shadow-xl hover:from-yellow-400 hover:to-yellow-600 transition transform hover:scale-105"
+                                    className="w-full py-3 rounded-lg font-semibold bg-gradient-to-r from-yellow-300 to-yellow-500 text-olive shadow-lg hover:shadow-xl hover:from-yellow-400 hover:to-yellow-600 hover:text-white transition transform hover:scale-105"
                                 >
                                     Send Message
                                 </button>

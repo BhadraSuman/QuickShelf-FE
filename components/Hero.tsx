@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <section className="w-full min-h-screen bg-white flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 py-20">
+        <section className="w-full min-h-screen bg-gradient-to-br from-white to-olive/10 flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 py-20">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-100 rounded-full blur-3xl opacity-30"></div>
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-olive/10 rounded-full blur-3xl opacity-50"></div>
@@ -34,7 +34,7 @@ export default function Hero() {
                 <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
                     <a
                         href="/contact"
-                        className="px-10 py-4 rounded-2xl font-bold text-lg bg-yellow-400 text-olive shadow-xl hover:shadow-2xl hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105"
+                        className="px-10 py-4 rounded-2xl font-bold text-lg bg-yellow-400 text-olive shadow-xl hover:shadow-2xl hover:bg-yellow-500 hover:text-white transition-all duration-300 transform hover:scale-105"
                     >
                         Start Free Trial
                     </a>
