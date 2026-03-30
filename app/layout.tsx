@@ -17,6 +17,10 @@ export const metadata: Metadata = {
     title: "Quickshelf - Retail Management Solutions",
     description: "Transform your retail business with Quickshelf's advanced store management, inventory, and POS solutions",
     keywords: "retail management, POS system, inventory management, electronic shelf labels, store software",
+    icons: {
+        icon: "/globe.svg",
+        shortcut: "/globe.svg",
+    },
 };
 
 export default function RootLayout({
