@@ -33,7 +33,7 @@ export default function Hero() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a
                             href="/contact"
-                            className="group flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg bg-yellow-400 text-olive shadow-lg hover:bg-yellow-500 transition-all"
+                            className="group flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg bg-yellow-400 text-olive shadow-lg hover:bg-yellow-500 hover:text-olive transition-all"
                         >
                             Start Free Trial
                             <FiArrowRight className="group-hover:translate-x-1 transition-transform" />

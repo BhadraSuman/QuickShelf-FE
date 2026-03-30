@@ -190,7 +190,7 @@ export default function Home() {
                     <div className="pt-6">
                         <a
                             href="/contact"
-                            className="inline-block px-12 py-5 rounded-2xl font-bold bg-yellow-400 text-olive shadow-xl hover:shadow-2xl hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 text-lg"
+                            className="inline-block px-12 py-5 rounded-2xl font-bold bg-yellow-400 text-olive hover:text-olive shadow-xl hover:shadow-2xl hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 text-lg"
                         >
                             Start Your Free Trial
                         </a>

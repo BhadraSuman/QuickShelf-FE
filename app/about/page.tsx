@@ -112,7 +112,7 @@ export default function AboutPage() {
                     
                     <div className="mt-8">
                         <button 
-                            onClick={() => window.open('https://udyamregistration.gov.in', '_blank')}
+                            onClick={() => window.open('https://udyamregistration.gov.in/Udyam_Verify.aspx', '_blank')}
                             className="inline-flex items-center gap-2 px-6 py-2 bg-olive text-white rounded-lg hover:bg-olive/90 transition text-sm"
                         >
                             <FiFileText /> Verify MSME Status

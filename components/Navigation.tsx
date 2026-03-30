@@ -73,8 +73,8 @@ export default function Navigation() {
                                         href={link.href}
                                         className={
                                             link.isButton
-                                                ? "px-6 py-2.5 rounded-xl bg-yellow-400 text-olive font-bold hover:bg-yellow-500 shadow-md transition-all"
-                                                : `font-bold transition-colors hover:text-yellow-600 ${
+                                                ? "px-6 py-2.5 rounded-xl bg-yellow-400 text-olive font-bold hover:bg-yellow-500 hover:text-olive shadow-md transition-all"
+                                                : `font-bold transition-colors hover:text-yellow ${
                                                       pathname === link.href ? "text-yellow-600" : "text-olive"
                                                   }`
                                         }

@@ -58,8 +58,8 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-olive mb-1">Email</h3>
-                                        <p className="text-gray-700">contact@quickshelf.com</p>
-                                        <p className="text-gray-700">support@quickshelf.com</p>
+                                        <p className="text-gray-700">uddipta.techsolutions@gmail.com</p>
+                                        {/* <p className="text-gray-700">support@quickshelf.com</p> */}
                                     </div>
                                 </div>
 
@@ -69,8 +69,8 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-olive mb-1">Phone</h3>
-                                        <p className="text-gray-700">+1 (800) QUICKSHELF</p>
-                                        <p className="text-gray-700">+1 (855) 784-2527</p>
+                                        <p className="text-gray-700">+91 62038 68358</p>
+                                        {/* <p className="text-gray-700">+1 (855) 784-2527</p> */}
                                     </div>
                                 </div>
 
@@ -80,9 +80,11 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-olive mb-1">Headquarters</h3>
-                                        <p className="text-gray-700">123 Retail Avenue</p>
-                                        <p className="text-gray-700">Commerce City, CA 90001</p>
-                                        <p className="text-gray-700">United States</p>
+                                        <p className="text-gray-700">
+                                            Uddipta Tech Solutions
+                                            <br />
+                                            Jamtara, Jharkhand, India
+                                        </p>
                                     </div>
                                 </div>
 
