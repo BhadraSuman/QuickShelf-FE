@@ -167,57 +167,57 @@ export default function Home() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">
-                                <FiZap className="inline text-5xl" />
+                            <div className="flex items-center gap-3 mb-4">
+                                <FiZap className="text-3xl sm:text-5xl text-yellow-500" />
+                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">Fast Implementation</h3>
                             </div>
-                            <h3 className="text-2xl font-bold text-olive mb-3">Fast Implementation</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Get up and running in days, not months. Our streamlined onboarding ensures minimal disruption to your
                                 business.
                             </p>
                         </div>
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">
-                                <FiLock className="inline text-5xl" />
+                            <div className="flex items-center gap-3 mb-4">
+                                <FiLock className="text-3xl sm:text-5xl text-olive" />
+                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">Security & Compliance</h3>
                             </div>
-                            <h3 className="text-2xl font-bold text-olive mb-3">Security & Compliance</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Enterprise-grade security with data encryption, compliance with retail standards, and regular security
                                 audits.
                             </p>
                         </div>
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">
-                                <FiPhone className="inline text-5xl" />
+                            <div className="flex items-center gap-3 mb-4">
+                                <FiPhone className="text-3xl sm:text-5xl text-olive" />
+                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">24/7 Support</h3>
                             </div>
-                            <h3 className="text-2xl font-bold text-olive mb-3">24/7 Support</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Dedicated support team available round the clock to assist with any issues or questions.
                             </p>
                         </div>
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">
-                                <FiGlobe className="inline text-5xl" />
+                            <div className="flex items-center gap-3 mb-4">
+                                <FiGlobe className="text-3xl sm:text-5xl text-olive" />
+                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">Global Scalability</h3>
                             </div>
-                            <h3 className="text-2xl font-bold text-olive mb-3">Global Scalability</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Designed to scale from single stores to multi-location enterprises across regions and countries.
                             </p>
                         </div>
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">
-                                <FiDollarSign className="inline text-5xl" />
+                            <div className="flex items-center gap-3 mb-4">
+                                <FiDollarSign className="text-3xl sm:text-5xl text-olive" />
+                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">Cost Effective</h3>
                             </div>
-                            <h3 className="text-2xl font-bold text-olive mb-3">Cost Effective</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Flexible pricing models with ROI-focused solutions that reduce operational costs and increase revenue.
                             </p>
                         </div>
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">
-                                <FiRefreshCw className="inline text-5xl" />
+                            <div className="flex items-center gap-3 mb-4">
+                                <FiRefreshCw className="text-3xl sm:text-5xl text-olive" />
+                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">Continuous Updates</h3>
                             </div>
-                            <h3 className="text-2xl font-bold text-olive mb-3">Continuous Updates</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Regular feature updates and improvements based on latest retail trends and customer feedback.
                             </p>

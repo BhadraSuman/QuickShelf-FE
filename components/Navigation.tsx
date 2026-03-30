@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { FiMenu, FiX, FiZap } from "react-icons/fi";
 
 export default function Navigation() {
@@ -55,34 +56,37 @@ export default function Navigation() {
                 <div className="px-4 sm:px-6 lg:px-8 py-4 md:py-5">
                     <div className="max-w-7xl mx-auto flex items-center justify-between">
                         {/* Logo */}
-                        <a href="/" className="flex items-center gap-3">
+                        <Link href="/" className="flex items-center gap-3">
                             <div className="w-11 h-11 bg-gradient-to-br from-olive-dark via-yellow-200 to-yellow-500 rounded-xl flex items-center justify-center shadow-lg">
                                 <FiZap className="text-white text-2xl" />
                             </div>
                             <span className="text-2xl sm:text-3xl font-black text-olive-600 tracking-tight">Quickshelf</span>
-                        </a>
+                        </Link>
 
                         {/* Desktop Menu */}
                         <ul className="hidden sm:flex gap-10 text-base sm:text-lg font-bold">
                             <li>
-                                <a href="/" className="text-olive hover:text-yellow-500 transition-colors duration-300 relative group">
+                                <Link href="/" className="text-olive hover:text-yellow-500 transition-colors duration-300 relative group">
                                     Home
                                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 rounded-full group-hover:w-full transition-all duration-300"></span>
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/about" className="text-olive hover:text-yellow-500 transition-colors duration-300 relative group">
+                                <Link
+                                    href="/about"
+                                    className="text-olive hover:text-yellow-500 transition-colors duration-300 relative group"
+                                >
                                     About
                                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 rounded-full group-hover:w-full transition-all duration-300"></span>
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="/contact"
                                     className="px-6 py-2 rounded-lg  bg-olive text-white font-bold shadow-md hover:shadow-lg hover:bg-olive/80 hover:text-white transition-all"
                                 >
                                     Contact
-                                </a>
+                                </Link>
                             </li>
                         </ul>
 
@@ -149,31 +153,31 @@ export default function Navigation() {
                         {/* Menu Items */}
                         <ul className="flex flex-col p-4 space-y-4">
                             <li>
-                                <a
+                                <Link
                                     href="/"
                                     className="block text-olive text-lg font-bold hover:text-yellow-500 transition-colors duration-300 py-3 px-4 hover:bg-yellow-50 rounded-lg"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="/about"
                                     className="block text-olive text-lg font-bold hover:text-yellow-500 transition-colors duration-300 py-3 px-4 hover:bg-yellow-50 rounded-lg"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     About
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="/contact"
                                     className="block px-4 py-3 rounded-lg bg-yellow-400 text-olive font-bold text-center hover:bg-yellow-500 transition-all"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     Contact
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
