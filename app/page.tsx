@@ -4,58 +4,45 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import ProductCard from "@/components/ProductCard";
 import {
-    FiPackage,
-    FiBarChart2,
-    FiUsers,
-    FiZap,
-    FiPlus,
-    FiTrendingUp,
-    FiSettings,
-    FiTag,
-    FiCreditCard,
-    FiSmartphone,
-    FiGift,
-    FiLock,
-    FiPhone,
-    FiGlobe,
-    FiDollarSign,
-    FiRefreshCw,
+    FiPackage, FiBarChart2, FiUsers, FiZap, FiPlus, FiTrendingUp,
+    FiSettings, FiTag, FiCreditCard, FiSmartphone, FiGift,
+    FiLock, FiPhone, FiGlobe, FiDollarSign, FiRefreshCw,
 } from "react-icons/fi";
 
 export default function Home() {
     const services = [
         {
-            icon: <FiPackage className="text-4xl text-yellow-500" />,
+            icon: <FiPackage />,
             title: "Store Management",
             description: "Centralized platform for managing store operations, sales, and customer data.",
             features: ["Real-time sales tracking", "Multi-store management", "Customer analytics", "Quick reconciliation"],
         },
         {
-            icon: <FiBarChart2 className="text-4xl text-yellow-500" />,
+            icon: <FiBarChart2 />,
             title: "Inventory Management",
             description: "Automated inventory tracking, stock optimization, and supply chain integration.",
             features: ["Real-time stock levels", "Automated reordering", "Barcode scanning", "Wastage reduction"],
         },
         {
-            icon: <FiUsers className="text-4xl text-yellow-500" />,
+            icon: <FiUsers />,
             title: "Staff Management",
             description: "Streamlined workforce management, scheduling, and performance tracking.",
             features: ["Shift scheduling", "Performance tracking", "Payroll integration", "Training modules"],
         },
         {
-            icon: <FiZap className="text-4xl text-yellow-500" />,
+            icon: <FiZap />,
             title: "Electronic Shelf Labels",
             description: "Dynamic pricing and product information display with wireless ESL technology.",
             features: ["Real-time price updates", "Energy efficient", "Multi-language support", "Promotion management"],
         },
         {
-            icon: <FiPlus className="text-4xl text-yellow-500" />,
+            icon: <FiPlus />,
             title: "API Integration",
             description: "Seamlessly connect Quickshelf with your existing retail systems and third-party platforms.",
             features: ["RESTful APIs", "Legacy system compatibility", "Real-time sync", "Custom integrations"],
         },
         {
-            icon: <FiTrendingUp className="text-4xl text-yellow-500" />,
+            icon: <FiTrendingUp />,
             title: "Analytics & Insights",
             description: "Advanced reporting and business intelligence to drive decision-making.",
             features: ["Sales analytics", "Customer behavior insights", "Trend analysis", "Custom reports"],
@@ -66,45 +53,54 @@ export default function Home() {
         {
             name: "Quickshelf Core",
             category: "Software",
-            image: <FiSettings className="text-6xl text-olive" />,
+            image: <FiSettings />,
             description: "Complete store management platform for inventory, sales, and customer management.",
             benefits: ["Cloud-based", "User-friendly interface", "Mobile app support", "24/7 support"],
         },
         {
             name: "Smart ESL System",
             category: "Hardware",
-            image: <FiTag className="text-6xl text-olive" />,
+            image: <FiTag />,
             description: "Electronic shelf labels with dynamic pricing and promotional capabilities.",
             benefits: ["2.4GHz wireless", "5-year battery life", "High visibility display", "Temperature stable"],
         },
         {
             name: "POS Integration",
             category: "Software",
-            image: <FiCreditCard className="text-6xl text-olive" />,
+            image: <FiCreditCard />,
             description: "Unified point-of-sale system with flexible payment options and customer data capture.",
             benefits: ["Multi-payment support", "Offline mode", "Receipt customization", "Fast transactions"],
         },
         {
             name: "Mobile Staff App",
             category: "Software",
-            image: <FiSmartphone className="text-6xl text-olive" />,
+            image: <FiSmartphone />,
             description: "Mobile application for staff to manage tasks, check schedules, and access store info.",
             benefits: ["iOS & Android", "Offline functionality", "Real-time notifications", "Task management"],
         },
         {
             name: "Data Analytics Suite",
             category: "Software",
-            image: <FiBarChart2 className="text-6xl text-olive" />,
+            image: <FiBarChart2 />,
             description: "Comprehensive analytics and business intelligence tools for retail insights.",
             benefits: ["Predictive analytics", "Custom dashboards", "Data export options", "Real-time reporting"],
         },
         {
             name: "Customer Loyalty Platform",
             category: "Software",
-            image: <FiGift className="text-6xl text-olive" />,
+            image: <FiGift />,
             description: "Loyalty program management with targeted promotions and customer engagement.",
             benefits: ["Personalized offers", "Points system", "Customer segmentation", "Reward redemption"],
         },
+    ];
+
+    const whyUs = [
+        { icon: <FiZap  />, title: "Fast Implementation", text: "Get up and running in days, not months. Our streamlined onboarding ensures minimal disruption." },
+        { icon: <FiLock />, title: "Security & Compliance", text: "Enterprise-grade security with data encryption and regular audits to meet retail standards." },
+        { icon: <FiPhone />, title: "24/7 Support", text: "A dedicated support team available round the clock to assist with any technical or operational questions." },
+        { icon: <FiGlobe />, title: "Global Scalability", text: "Designed to scale from single stores to multi-location enterprises across various regions." },
+        { icon: <FiDollarSign />, title: "Cost Effective", text: "ROI-focused solutions that reduce operational overhead while increasing your overall revenue." },
+        { icon: <FiRefreshCw />, title: "Continuous Updates", text: "Regular feature updates driven by the latest retail trends and direct customer feedback." },
     ];
 
     return (
@@ -115,15 +111,15 @@ export default function Home() {
             <section className="w-full bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-32">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16 md:mb-24">
-                        <div className="inline-block bg-olive/10 text-olive px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold mb-5 border border-olive/20">
-                            CORE SOLUTIONS
+                        <div className="inline-block bg-olive/10 text-olive px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold mb-5 border border-olive/20 uppercase tracking-widest">
+                            Core Solutions
                         </div>
                         <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-olive mb-6 leading-tight">
                             Our Complete Solutions
                         </h2>
-                        <div className="w-20 h-1.5 bg-olive mx-auto mb-8 rounded-full"></div>
-                        <p className="text-gray-700 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-                            Comprehensive software and hardware solutions designed for modern retail operations
+                        <div className="w-20 h-1.5 bg-yellow-400 mx-auto mb-8 rounded-full"></div>
+                        <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+                            Comprehensive software and hardware solutions designed for modern retail operations.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
@@ -138,13 +134,13 @@ export default function Home() {
             <section className="w-full bg-gray-50 px-4 sm:px-6 lg:px-8 py-20 md:py-32">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16 md:mb-24">
-                        <div className="inline-block bg-yellow-100 text-olive px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold mb-5 border border-yellow-300">
-                            PRODUCT LINEUP
+                        <div className="inline-block bg-yellow-100 text-olive px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold mb-5 border border-yellow-300 uppercase tracking-widest">
+                            Product Lineup
                         </div>
                         <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-olive mb-6 leading-tight">Products & Services</h2>
                         <div className="w-20 h-1.5 bg-olive mx-auto mb-8 rounded-full"></div>
-                        <p className="text-gray-700 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-                            Explore our complete product lineup tailored for retail excellence
+                        <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+                            Explore our complete product lineup tailored for retail excellence.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
@@ -157,87 +153,44 @@ export default function Home() {
 
             {/* Benefits Section */}
             <section className="w-full bg-white px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-                <div className="max-w-5xl mx-auto">
+                <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16 md:mb-24">
-                        <div className="inline-block bg-olive/10 text-olive px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold mb-5 border border-olive/20">
-                            WHY US
+                        <div className="inline-block bg-olive/10 text-olive px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold mb-5 border border-olive/20 uppercase tracking-widest">
+                            Why Us
                         </div>
                         <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-olive mb-6 leading-tight">Why Choose Quickshelf</h2>
-                        <div className="w-20 h-1.5 bg-olive mx-auto rounded-full"></div>
+                        <div className="w-20 h-1.5 bg-yellow-400 mx-auto rounded-full"></div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="flex items-center gap-3 mb-4">
-                                <FiZap className="text-3xl sm:text-5xl text-yellow-500" />
-                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">Fast Implementation</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {whyUs.map((benefit, idx) => (
+                            <div key={idx} className="flex flex-col h-full bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="text-4xl sm:text-5xl text-olive group-hover:scale-110 transition-transform">
+                                        {benefit.icon}
+                                    </div>
+                                    <h3 className="text-xl sm:text-2xl font-bold text-olive">{benefit.title}</h3>
+                                </div>
+                                <p className="text-gray-600 leading-relaxed">
+                                    {benefit.text}
+                                </p>
                             </div>
-                            <p className="text-gray-700 leading-relaxed">
-                                Get up and running in days, not months. Our streamlined onboarding ensures minimal disruption to your
-                                business.
-                            </p>
-                        </div>
-                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="flex items-center gap-3 mb-4">
-                                <FiLock className="text-3xl sm:text-5xl text-olive" />
-                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">Security & Compliance</h3>
-                            </div>
-                            <p className="text-gray-700 leading-relaxed">
-                                Enterprise-grade security with data encryption, compliance with retail standards, and regular security
-                                audits.
-                            </p>
-                        </div>
-                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="flex items-center gap-3 mb-4">
-                                <FiPhone className="text-3xl sm:text-5xl text-olive" />
-                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">24/7 Support</h3>
-                            </div>
-                            <p className="text-gray-700 leading-relaxed">
-                                Dedicated support team available round the clock to assist with any issues or questions.
-                            </p>
-                        </div>
-                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="flex items-center gap-3 mb-4">
-                                <FiGlobe className="text-3xl sm:text-5xl text-olive" />
-                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">Global Scalability</h3>
-                            </div>
-                            <p className="text-gray-700 leading-relaxed">
-                                Designed to scale from single stores to multi-location enterprises across regions and countries.
-                            </p>
-                        </div>
-                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="flex items-center gap-3 mb-4">
-                                <FiDollarSign className="text-3xl sm:text-5xl text-olive" />
-                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">Cost Effective</h3>
-                            </div>
-                            <p className="text-gray-700 leading-relaxed">
-                                Flexible pricing models with ROI-focused solutions that reduce operational costs and increase revenue.
-                            </p>
-                        </div>
-                        <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="flex items-center gap-3 mb-4">
-                                <FiRefreshCw className="text-3xl sm:text-5xl text-olive" />
-                                <h3 className="text-xl sm:text-2xl font-bold text-olive m-0">Continuous Updates</h3>
-                            </div>
-                            <p className="text-gray-700 leading-relaxed">
-                                Regular feature updates and improvements based on latest retail trends and customer feedback.
-                            </p>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
             {/* CTA Section */}
-            <section className="w-full bg-olive text-white px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full mix-blend-screen blur-3xl opacity-20"></div>
+            <section className="w-full bg-olive text-white px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full mix-blend-screen blur-[120px] opacity-20"></div>
                 <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">Transform Your Retail Business Today</h2>
-                    <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-                        Join hundreds of retailers already using Quickshelf to streamline operations and boost profitability
+                    <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+                        Join hundreds of retailers already using Quickshelf to streamline operations and boost profitability.
                     </p>
                     <div className="pt-6">
                         <a
                             href="/contact"
-                            className="inline-block px-12 py-4 rounded-2xl font-bold bg-yellow-400 text-olive shadow-xl hover:shadow-2xl hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 text-lg"
+                            className="inline-block px-12 py-5 rounded-2xl font-bold bg-yellow-400 text-olive shadow-xl hover:shadow-2xl hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 text-lg"
                         >
                             Start Your Free Trial
                         </a>
@@ -245,22 +198,25 @@ export default function Home() {
                 </div>
             </section>
 
-            {/*Newsletter Section*/}
+            {/* Newsletter Section */}
             <section className="w-full bg-gray-50 px-4 sm:px-6 lg:px-8 py-20 md:py-32">
                 <div className="max-w-3xl mx-auto text-center space-y-6">
                     <h2 className="text-3xl sm:text-4xl font-black text-olive">Stay Updated with Quickshelf</h2>
-                    <p className="text-gray-700 text-lg leading-relaxed">
-                        Subscribe to our newsletter for the latest retail insights, product updates, and exclusive offers.
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                        Subscribe to our newsletter for the latest retail insights and exclusive offers.
                     </p>
-                    <form className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <form className="flex flex-col sm:flex-row gap-4 justify-center" onSubmit={(e) => e.preventDefault()}>
+                        <label htmlFor="email-newsletter" className="sr-only">Email Address</label>
                         <input
+                            id="email-newsletter"
                             type="email"
+                            required
                             placeholder="Enter your email"
-                            className="w-full sm:w-auto px-6 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all duration-300"
+                            className="w-full sm:w-80 px-6 py-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all"
                         />
                         <button
                             type="submit"
-                            className="px-8 py-3 rounded-lg font-bold bg-yellow-400 text-olive shadow-xl hover:shadow-2xl hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 text-lg"
+                            className="px-10 py-4 rounded-xl font-bold bg-olive text-white shadow-lg hover:bg-olive/90 transition-all active:scale-95"
                         >
                             Subscribe
                         </button>
