@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FiMail, FiPhone, FiMapPin, FiClock, FiSmartphone, FiTwitter, FiLinkedin } from "react-icons/fi";
+import { FaYoutube } from "react-icons/fa";
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
@@ -51,7 +53,9 @@ export default function ContactPage() {
 
                             <div className="space-y-6">
                                 <div className="flex gap-4">
-                                    <div className="text-3xl shrink-0">📧</div>
+                                    <div className="text-3xl shrink-0 text-gray-700">
+                                        <FiMail />
+                                    </div>
                                     <div>
                                         <h3 className="font-bold text-olive mb-1">Email</h3>
                                         <p className="text-gray-700">contact@quickshelf.com</p>
@@ -60,7 +64,9 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className="flex gap-4">
-                                    <div className="text-3xl shrink-0">📞</div>
+                                    <div className="text-3xl shrink-0 text-gray-700">
+                                        <FiPhone />
+                                    </div>
                                     <div>
                                         <h3 className="font-bold text-olive mb-1">Phone</h3>
                                         <p className="text-gray-700">+1 (800) QUICKSHELF</p>
@@ -69,7 +75,9 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className="flex gap-4">
-                                    <div className="text-3xl shrink-0">📍</div>
+                                    <div className="text-3xl shrink-0 text-gray-700">
+                                        <FiMapPin />
+                                    </div>
                                     <div>
                                         <h3 className="font-bold text-olive mb-1">Headquarters</h3>
                                         <p className="text-gray-700">123 Retail Avenue</p>
@@ -79,7 +87,9 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className="flex gap-4">
-                                    <div className="text-3xl shrink-0">🕐</div>
+                                    <div className="text-3xl shrink-0 text-gray-700">
+                                        <FiClock />
+                                    </div>
                                     <div>
                                         <h3 className="font-bold text-olive mb-1">Business Hours</h3>
                                         <p className="text-gray-700">Monday - Friday: 9:00 AM - 6:00 PM</p>
@@ -94,17 +104,17 @@ export default function ContactPage() {
                         <div className="pt-8 border-t border-gray-200">
                             <h3 className="font-bold text-olive mb-4">Follow Us</h3>
                             <div className="flex gap-4">
-                                <a href="#" className="text-2xl hover:text-yellow-500 transition">
-                                    📱
+                                <a href="#" className="text-2xl text-gray-700 hover:text-yellow-500 transition">
+                                    <FiSmartphone />
                                 </a>
-                                <a href="#" className="text-2xl hover:text-yellow-500 transition">
-                                    🐦
+                                <a href="#" className="text-2xl text-gray-700 hover:text-yellow-500 transition">
+                                    <FiTwitter />
                                 </a>
-                                <a href="#" className="text-2xl hover:text-yellow-500 transition">
-                                    💼
+                                <a href="#" className="text-2xl text-gray-700 hover:text-yellow-500 transition">
+                                    <FiLinkedin />
                                 </a>
-                                <a href="#" className="text-2xl hover:text-yellow-500 transition">
-                                    📺
+                                <a href="#" className="text-2xl text-gray-700 hover:text-yellow-500 transition">
+                                    <FaYoutube />
                                 </a>
                             </div>
                         </div>

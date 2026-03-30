@@ -1,3 +1,7 @@
+"use client";
+
+import { FiStar } from "react-icons/fi";
+
 export default function Hero() {
     return (
         <section className="w-full min-h-screen bg-gradient-to-br from-white to-olive/10 flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 py-20">
@@ -7,8 +11,9 @@ export default function Hero() {
 
             <div className="max-w-4xl text-center space-y-8 relative z-10">
                 {/* Badge */}
-                <div className="inline-block bg-yellow-100 text-olive px-6 py-2.5 rounded-full text-sm font-bold border-2 border-yellow-300">
-                    ⭐ Transform Retail with Quickshelf
+                <div className="inline-flex items-center gap-3 bg-yellow-100 text-olive px-6 py-2.5 rounded-full text-sm font-bold border-2 border-yellow-300">
+                    <FiStar className="text-yellow-500" />
+                    <span>Transform Retail with Quickshelf</span>
                 </div>
 
                 {/* Main Heading */}

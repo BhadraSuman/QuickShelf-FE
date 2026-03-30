@@ -1,5 +1,10 @@
+"use client";
+
+import { FiCheck } from "react-icons/fi";
+import { ReactNode } from "react";
+
 interface ServiceCardProps {
-    icon: string;
+    icon: ReactNode;
     title: string;
     description: string;
     features: string[];
@@ -14,7 +19,7 @@ export default function ServiceCard({ icon, title, description, features }: Serv
             <ul className="space-y-2">
                 {features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-3 text-gray-700">
-                        <span className="text-yellow-500 font-bold text-lg">✓</span>
+                        <FiCheck className="text-yellow-500" />
                         <span className="text-sm font-medium">{feature}</span>
                     </li>
                 ))}

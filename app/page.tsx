@@ -3,41 +3,59 @@
 import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import ProductCard from "@/components/ProductCard";
+import {
+    FiPackage,
+    FiBarChart2,
+    FiUsers,
+    FiZap,
+    FiPlus,
+    FiTrendingUp,
+    FiSettings,
+    FiTag,
+    FiCreditCard,
+    FiSmartphone,
+    FiGift,
+    FiLock,
+    FiPhone,
+    FiGlobe,
+    FiDollarSign,
+    FiRefreshCw,
+} from "react-icons/fi";
 
 export default function Home() {
     const services = [
         {
-            icon: "📦",
+            icon: <FiPackage className="text-4xl text-yellow-500" />,
             title: "Store Management",
             description: "Centralized platform for managing store operations, sales, and customer data.",
             features: ["Real-time sales tracking", "Multi-store management", "Customer analytics", "Quick reconciliation"],
         },
         {
-            icon: "📊",
+            icon: <FiBarChart2 className="text-4xl text-yellow-500" />,
             title: "Inventory Management",
             description: "Automated inventory tracking, stock optimization, and supply chain integration.",
             features: ["Real-time stock levels", "Automated reordering", "Barcode scanning", "Wastage reduction"],
         },
         {
-            icon: "👥",
+            icon: <FiUsers className="text-4xl text-yellow-500" />,
             title: "Staff Management",
             description: "Streamlined workforce management, scheduling, and performance tracking.",
             features: ["Shift scheduling", "Performance tracking", "Payroll integration", "Training modules"],
         },
         {
-            // icon: "💡",
+            icon: <FiZap className="text-4xl text-yellow-500" />,
             title: "Electronic Shelf Labels",
             description: "Dynamic pricing and product information display with wireless ESL technology.",
             features: ["Real-time price updates", "Energy efficient", "Multi-language support", "Promotion management"],
         },
         {
-            // icon: "🔌",
+            icon: <FiPlus className="text-4xl text-yellow-500" />,
             title: "API Integration",
             description: "Seamlessly connect Quickshelf with your existing retail systems and third-party platforms.",
             features: ["RESTful APIs", "Legacy system compatibility", "Real-time sync", "Custom integrations"],
         },
         {
-            icon: "📈",
+            icon: <FiTrendingUp className="text-4xl text-yellow-500" />,
             title: "Analytics & Insights",
             description: "Advanced reporting and business intelligence to drive decision-making.",
             features: ["Sales analytics", "Customer behavior insights", "Trend analysis", "Custom reports"],
@@ -48,42 +66,42 @@ export default function Home() {
         {
             name: "Quickshelf Core",
             category: "Software",
-            image: "⚙️",
+            image: <FiSettings className="text-6xl text-olive" />,
             description: "Complete store management platform for inventory, sales, and customer management.",
             benefits: ["Cloud-based", "User-friendly interface", "Mobile app support", "24/7 support"],
         },
         {
             name: "Smart ESL System",
             category: "Hardware",
-            image: "🏷️",
+            image: <FiTag className="text-6xl text-olive" />,
             description: "Electronic shelf labels with dynamic pricing and promotional capabilities.",
             benefits: ["2.4GHz wireless", "5-year battery life", "High visibility display", "Temperature stable"],
         },
         {
             name: "POS Integration",
             category: "Software",
-            image: "💳",
+            image: <FiCreditCard className="text-6xl text-olive" />,
             description: "Unified point-of-sale system with flexible payment options and customer data capture.",
             benefits: ["Multi-payment support", "Offline mode", "Receipt customization", "Fast transactions"],
         },
         {
             name: "Mobile Staff App",
             category: "Software",
-            image: "📱",
+            image: <FiSmartphone className="text-6xl text-olive" />,
             description: "Mobile application for staff to manage tasks, check schedules, and access store info.",
             benefits: ["iOS & Android", "Offline functionality", "Real-time notifications", "Task management"],
         },
         {
             name: "Data Analytics Suite",
             category: "Software",
-            image: "📊",
+            image: <FiBarChart2 className="text-6xl text-olive" />,
             description: "Comprehensive analytics and business intelligence tools for retail insights.",
             benefits: ["Predictive analytics", "Custom dashboards", "Data export options", "Real-time reporting"],
         },
         {
             name: "Customer Loyalty Platform",
             category: "Software",
-            image: "🎁",
+            image: <FiGift className="text-6xl text-olive" />,
             description: "Loyalty program management with targeted promotions and customer engagement.",
             benefits: ["Personalized offers", "Points system", "Customer segmentation", "Reward redemption"],
         },
@@ -149,7 +167,9 @@ export default function Home() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">🚀</div>
+                            <div className="text-5xl mb-4">
+                                <FiZap className="inline text-5xl" />
+                            </div>
                             <h3 className="text-2xl font-bold text-olive mb-3">Fast Implementation</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Get up and running in days, not months. Our streamlined onboarding ensures minimal disruption to your
@@ -157,7 +177,9 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">🔒</div>
+                            <div className="text-5xl mb-4">
+                                <FiLock className="inline text-5xl" />
+                            </div>
                             <h3 className="text-2xl font-bold text-olive mb-3">Security & Compliance</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Enterprise-grade security with data encryption, compliance with retail standards, and regular security
@@ -165,28 +187,36 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">📞</div>
+                            <div className="text-5xl mb-4">
+                                <FiPhone className="inline text-5xl" />
+                            </div>
                             <h3 className="text-2xl font-bold text-olive mb-3">24/7 Support</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Dedicated support team available round the clock to assist with any issues or questions.
                             </p>
                         </div>
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">🌍</div>
+                            <div className="text-5xl mb-4">
+                                <FiGlobe className="inline text-5xl" />
+                            </div>
                             <h3 className="text-2xl font-bold text-olive mb-3">Global Scalability</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Designed to scale from single stores to multi-location enterprises across regions and countries.
                             </p>
                         </div>
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">💰</div>
+                            <div className="text-5xl mb-4">
+                                <FiDollarSign className="inline text-5xl" />
+                            </div>
                             <h3 className="text-2xl font-bold text-olive mb-3">Cost Effective</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Flexible pricing models with ROI-focused solutions that reduce operational costs and increase revenue.
                             </p>
                         </div>
                         <div className="bg-white rounded-2xl p-8 border-2 border-olive/20 hover:border-yellow-300 hover:shadow-lg transition-all duration-300">
-                            <div className="text-5xl mb-4">🔄</div>
+                            <div className="text-5xl mb-4">
+                                <FiRefreshCw className="inline text-5xl" />
+                            </div>
                             <h3 className="text-2xl font-bold text-olive mb-3">Continuous Updates</h3>
                             <p className="text-gray-700 leading-relaxed">
                                 Regular feature updates and improvements based on latest retail trends and customer feedback.

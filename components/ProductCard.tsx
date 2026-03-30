@@ -1,3 +1,8 @@
+"use client";
+
+import { FiCheck } from "react-icons/fi";
+import { ReactNode } from "react";
+
 export default function ProductCard({
     name,
     category,
@@ -7,7 +12,7 @@ export default function ProductCard({
 }: {
     name: string;
     category: string;
-    image: string;
+    image: ReactNode;
     description: string;
     benefits: string[];
 }) {
@@ -25,7 +30,7 @@ export default function ProductCard({
                 <ul className="space-y-1.5 pt-3 border-t border-gray-200">
                     {benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-start gap-3 text-gray-700 text-xs sm:text-sm">
-                            <span className="text-yellow-500 font-bold mt-0.5">●</span>
+                            <FiCheck className="text-yellow-500 mt-0.5" />
                             <span className="font-medium">{benefit}</span>
                         </li>
                     ))}
