@@ -1,7 +1,6 @@
-"use client";
-
 import { FaHandshake, FaAward } from "react-icons/fa";
-import { FiTarget, FiStar, FiBook, FiZap, FiPackage, FiPlus, FiTag, FiFileText } from "react-icons/fi";
+import { FiTarget, FiStar, FiBook, FiZap } from "react-icons/fi";
+import VerifyButton from './VerifyButton';
 
 export const metadata = {
   title: "About Us", 
@@ -117,12 +116,7 @@ export default function AboutPage() {
                     </div>
                     
                     <div className="mt-8">
-                        <button 
-                            onClick={() => window.open('https://udyamregistration.gov.in/Udyam_Verify.aspx', '_blank')}
-                            className="inline-flex items-center gap-2 px-6 py-2 bg-olive text-white rounded-lg hover:bg-olive/90 transition text-sm"
-                        >
-                            <FiFileText /> Verify MSME Status
-                        </button>
+                        <VerifyButton />
                     </div>
                 </div>
             </section>
