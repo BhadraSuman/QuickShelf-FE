@@ -3,6 +3,12 @@
 import { FaHandshake, FaAward } from "react-icons/fa";
 import { FiTarget, FiStar, FiBook, FiZap, FiPackage, FiPlus, FiTag, FiFileText } from "react-icons/fi";
 
+export const metadata = {
+  title: "About Us", 
+  // This will render as "About Us | QuickShelf" because of the template in layout.tsx
+  description: "Learn how QuickShelf is helping 500+ retailers modernize their operations.",
+};
+
 export default function AboutPage() {
     return (
         <main className="min-h-screen bg-white text-olive">

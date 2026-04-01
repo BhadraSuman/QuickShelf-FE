@@ -14,13 +14,42 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Quickshelf - Retail Management Solutions",
-    description: "Transform your retail business with Quickshelf's advanced store management, inventory, and POS solutions",
-    keywords: "retail management, POS system, inventory management, electronic shelf labels, store software",
-    icons: {
-        icon: "/globe.svg",
-        shortcut: "/globe.svg",
-    },
+  metadataBase: new URL("https://quickshelf.online"),
+  title: {
+    default: "QuickShelf | Smart Electronic Shelf Labels (ESL) & Inventory",
+    template: "%s | QuickShelf",
+  },
+  description: "Transform your retail store with QuickShelf. Automated price updates, real-time inventory sync, and industry-leading ESL technology.",
+  keywords: ["ESL", "Electronic Shelf Labels", "Retail Automation", "Inventory Management", "Smart Store"],
+  authors: [{ name: "Suman Bhadra" }],
+  creator: "Suman Bhadra",
+  
+  // OpenGraph (Facebook, LinkedIn, Discord)
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://quickshelf.online",
+    siteName: "QuickShelf",
+    title: "QuickShelf | The Future of Retail Digitization",
+    description: "Manage your store prices in milliseconds with our smart ESL solutions.",
+    images: [
+      {
+        url: "/og-main.png", // Put this in your public folder
+        width: 1200,
+        height: 630,
+        alt: "QuickShelf Dashboard and ESL Hardware",
+      },
+    ],
+  },
+
+  // Twitter/X Card
+  twitter: {
+    card: "summary_large_image",
+    title: "QuickShelf | Smart Retail Solutions",
+    description: "Digitize your shelves and automate inventory with QuickShelf.",
+    images: ["/og-main.png"], 
+    creator: "@your_twitter_handle",
+  },
 };
 
 export default function RootLayout({
