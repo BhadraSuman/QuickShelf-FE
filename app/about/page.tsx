@@ -1,11 +1,11 @@
 import { FaHandshake, FaAward } from "react-icons/fa";
 import { FiTarget, FiStar, FiBook, FiZap } from "react-icons/fi";
-import VerifyButton from './VerifyButton';
+import VerifyButton from "./VerifyButton";
 
 export const metadata = {
-  title: "About Us", 
-  // This will render as "About Us | QuickShelf" because of the template in layout.tsx
-  description: "Learn how QuickShelf is helping 500+ retailers modernize their operations.",
+    title: "About Us",
+    // This will render as "About Us | QuickShelf" because of the template in layout.tsx
+    description: "Learn how QuickShelf is helping 500+ retailers modernize their operations.",
 };
 
 export default function AboutPage() {
@@ -30,9 +30,9 @@ export default function AboutPage() {
                                 <FiTarget className="text-2xl" /> Our Mission
                             </h2>
                             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                                To empower retail businesses with affordable, cutting-edge ESL (Electronic Shelf Label) technology and software 
-                                support that streamlines inventory and pricing. We believe local retailers should have access to the same 
-                                high-tech tools as global giants.
+                                To empower retail businesses with affordable, cutting-edge ESL (Electronic Shelf Label) technology and
+                                software support that streamlines inventory and pricing. We believe local retailers should have access to
+                                the same high-tech tools as global giants.
                             </p>
                         </div>
                         <div className="space-y-4">
@@ -40,7 +40,7 @@ export default function AboutPage() {
                                 <FiStar className="text-2xl text-yellow-500" /> Our Vision
                             </h2>
                             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                                To be the backbone of retail digital transformation in India, starting from our roots in Jharkhand and 
+                                To be the backbone of retail digital transformation in India, starting from our roots in Jharkhand and
                                 expanding globally through innovative hardware-software integration.
                             </p>
                         </div>
@@ -56,8 +56,8 @@ export default function AboutPage() {
                             <FiBook className="text-2xl" /> The Brand & The Company
                         </h3>
                         <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                            <strong>Quickshelf</strong> is the specialized retail brand operated by <strong>Uddipta Tech Solutions</strong>. 
-                            While Quickshelf focuses on the customer experience and retail interfaces, Uddipta Tech Solutions handles the 
+                            <strong>Quickshelf</strong> is the specialized retail brand operated by <strong>Uddipta Tech Solutions</strong>.
+                            While Quickshelf focuses on the customer experience and retail interfaces, Uddipta Tech Solutions handles the
                             underlying software engineering, electronic component manufacturing, and technical consultancy.
                         </p>
                     </div>
@@ -68,8 +68,8 @@ export default function AboutPage() {
                                 <FiZap className="text-xl" /> Manufacturing
                             </h3>
                             <p className="text-gray-700 text-base">
-                                We don't just provide software; we manufacture bare printed circuit boards and interface cards to power 
-                                our ESL ecosystems.
+                                We don't just provide software; we manufacture bare printed circuit boards and interface cards to power our
+                                ESL ecosystems.
                             </p>
                         </div>
                         <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
@@ -77,8 +77,8 @@ export default function AboutPage() {
                                 <FaHandshake className="text-xl" /> Reliability
                             </h3>
                             <p className="text-gray-700 text-base">
-                                As a registered Micro-Enterprise, we adhere to strict standards of professional service and government-backed 
-                                accountability.
+                                As a registered Micro-Enterprise, we adhere to strict standards of professional service and
+                                government-backed accountability.
                             </p>
                         </div>
                     </div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
                     </div>
                     <h2 className="text-2xl font-bold text-olive mb-2">Registered Micro Enterprise</h2>
                     <p className="text-gray-600 mb-6 italic">Ministry of Micro, Small & Medium Enterprises, Govt. of India</p>
-                    
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                         <div>
                             <p className="text-xs text-gray-500 uppercase font-semibold">Legal Entity</p>
@@ -114,7 +114,7 @@ export default function AboutPage() {
                             <p className="text-olive font-bold text-sm">Manufacturing & Services</p>
                         </div>
                     </div>
-                    
+
                     <div className="mt-8">
                         <VerifyButton />
                     </div>
