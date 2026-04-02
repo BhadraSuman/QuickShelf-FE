@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import ProductCard from "@/components/ProductCard";
@@ -8,8 +9,73 @@ import {
     FiSettings, FiTag, FiCreditCard, FiSmartphone, FiGift,
     FiLock, FiPhone, FiGlobe, FiDollarSign, FiRefreshCw,
 } from "react-icons/fi";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+
+const CarouselDots = ({ api }: { api: any }) => {
+    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+    useEffect(() => {
+        if (!api) return;
+        const onSelect = () => {
+            setSelectedIndex(api.selectedScrollSnap());
+        };
+        const onInit = () => {
+            setScrollSnaps(api.scrollSnapList());
+        }
+        onInit();
+        onSelect();
+        api.on('select', onSelect);
+        api.on('reInit', onInit);
+        api.on('reInit', onSelect);
+        return () => {
+            api.off('select', onSelect);
+            api.off('reInit', onInit);
+            api.off('reInit', onSelect);
+        }
+    }, [api]);
+
+    if (scrollSnaps.length <= 1) return null;
+
+    return (
+        <div className="flex justify-center gap-2 mt-8 md:hidden">
+            {scrollSnaps.map((_, index) => (
+                <button
+                    key={index}
+                    onClick={() => api?.scrollTo(index)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                        index === selectedIndex ? 'bg-olive w-6' : 'bg-gray-300 w-2'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                />
+            ))}
+        </div>
+    );
+};
 
 export default function Home() {
+    const [servicesRef, servicesApi] = useEmblaCarousel({
+        align: 'start',
+        breakpoints: {
+            '(min-width: 768px)': { active: false }
+        }
+    }, [Autoplay({ delay: 2000, stopOnInteraction: false })]);
+
+    const [productsRef, productsApi] = useEmblaCarousel({
+        align: 'start',
+        breakpoints: {
+            '(min-width: 768px)': { active: false }
+        }
+    }, [Autoplay({ delay: 2000, stopOnInteraction: false })]);
+
+    const [whyUsRef, whyUsApi] = useEmblaCarousel({
+        align: 'start',
+        breakpoints: {
+            '(min-width: 768px)': { active: false }
+        }
+    }, [Autoplay({ delay: 2000, stopOnInteraction: false })]);
+
     const services = [
         {
             icon: <FiPackage />,
@@ -122,11 +188,17 @@ export default function Home() {
                             Comprehensive software and hardware solutions designed for modern retail operations.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                        {services.map((service, idx) => (
-                            <ServiceCard key={idx} {...service} />
-                        ))}
+                    {/* py-6 and -my-6 prevent shadows and hover scales from getting clipped on mobile */}
+                    <div className="overflow-hidden md:overflow-visible -mx-4 px-4 sm:-mx-6 sm:px-6 py-6 -my-6 md:mx-0 md:px-0 md:py-0 md:my-0" ref={servicesRef}>
+                        <div className="flex select-none touch-pan-y md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10">
+                            {services.map((service, idx) => (
+                                <div key={idx} className="flex-[0_0_85%] min-w-0 md:flex-none">
+                                    <ServiceCard {...service} />
+                                </div>
+                            ))}
+                        </div>
                     </div>
+                    <CarouselDots api={servicesApi} />
                 </div>
             </section>
 
@@ -143,11 +215,16 @@ export default function Home() {
                             Explore our complete product lineup tailored for retail excellence.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                        {products.map((product, idx) => (
-                            <ProductCard key={idx} {...product} />
-                        ))}
+                    <div className="overflow-hidden md:overflow-visible -mx-4 px-4 sm:-mx-6 sm:px-6 py-6 -my-6 md:mx-0 md:px-0 md:py-0 md:my-0" ref={productsRef}>
+                        <div className="flex select-none touch-pan-y md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10">
+                            {products.map((product, idx) => (
+                                <div key={idx} className="flex-[0_0_85%] min-w-0 md:flex-none">
+                                    <ProductCard {...product} />
+                                </div>
+                            ))}
+                        </div>
                     </div>
+                    <CarouselDots api={productsApi} />
                 </div>
             </section>
 
@@ -161,21 +238,26 @@ export default function Home() {
                         <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-olive mb-6 leading-tight">Why Choose Quickshelf</h2>
                         <div className="w-20 h-1.5 bg-yellow-400 mx-auto rounded-full"></div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {whyUs.map((benefit, idx) => (
-                            <div key={idx} className="flex flex-col h-full bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <div className="text-4xl sm:text-5xl text-olive group-hover:scale-110 transition-transform">
-                                        {benefit.icon}
+                    <div className="overflow-hidden md:overflow-visible -mx-4 px-4 sm:-mx-6 sm:px-6 py-6 -my-6 md:mx-0 md:px-0 md:py-0 md:my-0" ref={whyUsRef}>
+                        <div className="flex select-none touch-pan-y md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10">
+                            {whyUs.map((benefit, idx) => (
+                                <div key={idx} className="flex-[0_0_85%] min-w-0 md:flex-none">
+                                    <div className="flex flex-col h-full bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group">
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="text-4xl sm:text-5xl text-olive group-hover:scale-110 transition-transform">
+                                                {benefit.icon}
+                                            </div>
+                                            <h3 className="text-xl sm:text-2xl font-bold text-olive">{benefit.title}</h3>
+                                        </div>
+                                        <p className="text-gray-600 leading-relaxed">
+                                            {benefit.text}
+                                        </p>
                                     </div>
-                                    <h3 className="text-xl sm:text-2xl font-bold text-olive">{benefit.title}</h3>
                                 </div>
-                                <p className="text-gray-600 leading-relaxed">
-                                    {benefit.text}
-                                </p>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
+                    <CarouselDots api={whyUsApi} />
                 </div>
             </section>
 
